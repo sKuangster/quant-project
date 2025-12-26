@@ -8,6 +8,14 @@ X0: initial wealth
 def one_period_wealth(S0, S1, r, delta, X0):
     return delta*S1+(1+r)*(X0-delta*S0)
 
+def is_abritrage(x1_up, x1_down):
+    return (
+        x1_up >= 0 and
+        x1_down >= 0 and
+        (x1_up > 0 or x1_down > 0)
+    )
+
+
 S0 = 100
 u = 1.2
 d = 0.8
