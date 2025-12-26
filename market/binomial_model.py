@@ -14,27 +14,3 @@ def is_arbitrage(x1_up, x1_down):
         x1_down >= 0 and
         (x1_up > 0 or x1_down > 0)
     )
-
-
-S0 = 100
-u = 1.2
-d = 0.8
-r = 0.05
-X0 = 0
-
-s1_up = u*S0
-s1_down = d*S0
-
-x1_H_delta_0 = one_period_wealth(S0, s1_up, r, 0, X0)
-x1_L_delta_0 = one_period_wealth(S0, s1_down, r, 0, X0)
-x1_H_delta_pos = one_period_wealth(S0, s1_up, r, 1, X0)
-x1_L_delta_pos = one_period_wealth(S0, s1_down, r, 1, X0)
-x1_H_delta_neg = one_period_wealth(S0, s1_up, r, -1, X0)
-x1_L_delta_neg = one_period_wealth(S0, s1_down, r, -1, X0)
-
-print(x1_H_delta_0)
-print(x1_L_delta_0)
-print(x1_H_delta_pos)
-print(x1_L_delta_pos)
-print(x1_H_delta_neg)
-print(x1_L_delta_neg)
